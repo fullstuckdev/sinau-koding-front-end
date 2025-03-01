@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Action, Method, dan Target</title>
+</head>
+<body>
+
+    <!-- TAB YANG SAMA -->
+    <div class="form-container">
+        <h2>Form Get dengan Target _self (di tab yang sama)</h2>
+        <form action="https://www.google.com/search" method="GET" target="_self">
+            <div class="form-group">
+                <label for="q">Cari di Google</label>
+                <input type="text" id="q" name="q" required>
+            </div>
+            <button type="submit">Cari di tab ini</button>
+        </form>
+    </div>
+
+
+    <!-- TAB BARU -->
+    <div class="form-container">
+        <h2>Form Get dengan Target blank (di tab yang baru)</h2>
+        <form action="https://www.google.com/search" method="GET" target="_blank">
+            <div class="form-group">
+                <label for="q">Cari di Google</label>
+                <input type="text" id="q" name="q" required>
+            </div>
+            <button type="submit">Cari di tab ini</button>
+        </form>
+    </div>
+
+    
+    <div class="form-container">
+        <h2>Form dengan mailto</h2>
+        <form action="mailto:taufikmulyawan@gmail.com" method="POST" enctype="text/plain">
+            <div class="form-group">
+                <label for="subject">Subjek</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="body">Pesan</label>
+                <textarea id="body" name="body" rows="4" required></textarea>
+            </div>
+            <button type="submit">Kirim Email</button>
+        </form>
+    </div>
+
+</body>
+</html>
