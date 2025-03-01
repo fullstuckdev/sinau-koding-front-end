@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas Sinau Coding</title>
+  </head>
+  <body>
+    <!-- Header Section -->
+
+    <header class="header">
+      <section class="gambar">
+        <img class="akuImage" src="aku.jpg" alt="Foto Profile" />
+      </section>
+    </header>
+    <div class="atas">
+      <h1>Faisal Fahmi Kurniawan</h1>
+
+      <p>Saya seorang Front End Developer</p>
+    </div>
+
+    <!-- Navigation Area -->
+
+    <h2>Navigation Area</h2>
+    <div>
+      <nav>
+        <ul class="navbar">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+
+    <main>
+      <article>
+        <h3>Saya seorang gamers.</h3>
+        <p>
+          Saya bermain Mobile Lagends , Valorant , dan CS . Saya suka bermain
+          Game sejak usia 12 tahun.
+        </p>
+      </article>
+      <section id="about">
+        <h2>About Me Section</h2>
+
+        <p>
+          Perkenalkan Nama Saya Faisal Fahmi Kurniawan, Saya Lahir di Malang,12
+          Juli 2001 .
+        </p>
+      </section>
+
+      <section id="Skills">
+        <h2>Skill</h2>
+        <div>
+          <p>Soft Skill</p>
+          <ul>
+            <li>Kemampuan beradaptasi</li>
+
+            <li>Kemampuan manajemen waktu</li>
+
+            <li>Kemampuan menyelesaikan masalah</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        <a href="https://www.instagram.com/__faisalfahmi/?hl=en"
+          >ig: faisalfahmi__</a
+        >
+        | &copy; FaisalFahmi2025 | Discord: Lymsleia21
+      </p>
+    </footer>
+  </body>
+</html>
+<style>
+  .header {
+    background: blue;
+  }
+
+  .gambar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    background: yellow;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    list-style-type: none;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    background: blue;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .atas {
+    justify-content: center;
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+  }
+  @media only screen and (max-width: 600px) {
+    .navbar {
+      flex-direction: column;
+      display: flex;
+    }
+  }
+</style>
