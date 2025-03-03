@@ -1,0 +1,11 @@
+# Global Rules
+User-agent: *
+Allow: /
+Allow: /bootcamp/
+Allow: /contact/
+
+# Disallow Admin
+Disallow: /admin/
+Disallow: /private/
+Disallow: /checkout/
+Disallow: /cart/

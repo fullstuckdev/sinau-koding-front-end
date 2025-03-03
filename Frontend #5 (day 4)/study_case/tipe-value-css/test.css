@@ -1,0 +1,19 @@
+html {
+    font-size: 20px;
+}
+
+.parent-em {
+    font-size: 16px;
+}
+
+.parent-rem {
+    font-size: 2rem; /* 2 x 20px = 40px */
+}
+
+.child-em {
+    font-size: 2em; /* 2 x 16px = 32px */
+}
+
+.child-rem {
+    font-size: 2rem; /* 2 x 20px = 40px */
+}

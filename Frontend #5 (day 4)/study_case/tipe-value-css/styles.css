@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.color-section div {
+    padding: 20px;
+    margin: 10px 0;
+    color: white;   
+}
+
+.color-hex {
+    background-color: #FF5733;
+}
+
+.color-name {
+    background-color: tomato;
+}
+
+.color-rgb {
+    background-color: rgb(60, 179, 113);
+}
+
+.ukuran-section {
+    font-size: 16px; /* Font Parent */
+}
+
+.size-px {
+    width: 200px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin: 10px 0
+}
+
+.size-em {
+    width: 15em; /* 15 x ukuran font parent (15 x 16px = 240px) */
+    padding: 1.2em /* 1.2 x ukuran font parent (1.2 x 16px) */;
+    background-color: #e0e0e0;
+    margin: 10px 0;
+}
+
+.size-percent {
+    width: 75%;
+    padding: 20px;
+    background-color: #d0d0d0;
+    margin: 10px 0;
+}
+
+.position-container {
+    position: relative;
+    height: 200px;
+    background-color: #f8f8f8;
+    margin: 20px 0;
+    border: 1px solid #ccc
+}
+
+.position-relative {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+    width: 200px;
+}
+
+.position-absolute {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #2196F3;
+    padding: 10px;
+    color: white;
+    width: 200px;
+}
+
+.position-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FF9800;
+    padding: 10px;
+    color: white;
+    width: 150px;
+}

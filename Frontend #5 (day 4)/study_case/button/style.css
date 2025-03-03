@@ -1,0 +1,47 @@
+.btn {
+    padding: 12px 24px;
+    background: linear-gradient(45deg, #2196F3, #00BCD4);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0,2);
+}
+
+.btn-shadow {
+    background-color: #673AB7;
+}
+
+.btn-shadow:hover {
+    box-shadow: 0 5px 20px rgba(103,58,182,0.5);
+}
+
+.btn-scale {
+    background-color: #4CAF50;
+}
+
+.btn-scale:hover {
+    transform: scale(1.1);
+}
+
+.btn-rotate {
+    background-color: #FF9800;
+}
+
+.btn-rotate:hover {
+    transform: rotate(100deg);
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+}
