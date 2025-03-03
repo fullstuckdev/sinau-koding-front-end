@@ -1,0 +1,163 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header and Navbar styles */
+header {
+  background-color: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav .logo img {
+  width: 100px;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #f4f4f4;
+  border-radius: 4px;
+}
+
+/* Profile Section Styles */
+.profile {
+  background-color: white;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+.profile-info h1 {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.profile-info p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.profile-info h2 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.profile-info ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.profile-info ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.profile-info a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.profile-info a:hover {
+  text-decoration: underline;
+}
+
+/* About Section Styles */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: white;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-info {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.about-info h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.about-info p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-info h3 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.about-info ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.about-info ul li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
