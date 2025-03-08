@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Container Demo</title>
+    <style>
+        .container {
+            margin: 20px;
+            padding: 10px;
+            background-color: aquamarine;
+            border: 2px solid #333
+        }
+
+        .item {
+            padding: 20px;
+            background-color: rgb(74, 90, 80);
+            color: white;
+            text-align: center;
+        }
+
+    /* 1. Grid Template Columns Demo */
+        .columns-demo {
+            display: grid;
+            grid-template-columns: 100px 200px auto;
+            gap: 10px
+        }
+
+    /* 2. Grid Template Rows Demo */
+        .rows-demo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 50px 100px 75px;
+            gap: 10px
+        }
+
+    /* 3. Justify Content Demo */
+        .justify-demo {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            justify-content: space-between;
+            gap: 10px;
+            height: 200px;
+        }
+
+
+    /* 4. Align Items Demo */
+         .align-demo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            gap: 10px;
+            height: 200px;
+        }
+
+        .align-demo .item {
+            height: 50px;
+        }
+
+        .align-demo item:nth-child(2) {
+            height: 100px;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <h2>1. Grid Template Columns (100px 200px auto)</h2>
+    <div class="container columns-demo">
+        <div class="item">100px</div>
+        <div class="item">200px</div>
+        <div class="item">auto</div>
+    </div>
+
+    <h2>2. Grid Template Rows (50px 100px 75px)</h2>
+    <div class="container rows-demo">
+        <div class="item">Row 1</div>
+        <div class="item">Row 1</div>
+        <div class="item">Row 1</div>
+        <div class="item">Row 2</div>
+        <div class="item">Row 2</div>
+        <div class="item">Row 2</div>
+        <div class="item">Row 3</div>
+        <div class="item">Row 3</div>
+        <div class="item">Row 3</div>
+    </div>
+
+    <h2>3. Justify Content (space-between)</h2>
+    <div class="container justify-demo">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>4. Align Items (center)</h2>
+    <div class="container align-demo">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+</body>
+</html>

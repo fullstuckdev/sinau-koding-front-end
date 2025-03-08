@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative Position Demo</title>
+    <style>
+        .container {
+            width: 600px;
+            margin: 20px auto;
+            border: 2px dashed #666;
+            padding: 20px;
+        }
+
+        .box {
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+            display: inline-block;
+        }
+
+        .normal-box {
+            background-color: lightgray;
+        }
+
+        .relative-box-1 {
+            position: relative;
+            top: 30px;
+            left: 30px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Demonstrasi Position: Relative</h2>
+
+        <div class="box normal-box">
+            Box Normal (Static)
+        </div>
+
+        <div class="box relative-box-1">
+            Relative Box 1
+            (top: 30px, left: 30px)
+        </div>
+    </div>
+</body>
+</html>

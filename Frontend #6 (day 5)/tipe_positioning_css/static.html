@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static HTML</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        .static-box {
+            position: static;
+            background-color: lightblue;
+        }
+
+        .static-box-with-offset {
+            position: static;
+            background-color: lightgreen;
+            top: 150000px; /* tidak berpengaruh */
+            left: 100050px; /* tidak berpengaruh */
+            right: 500px; /* tidak berpengaruh */
+            bottom: 500px; /* tidak berpengaruh */
+        }
+
+    </style>
+</head>
+<body>
+ <h1>Demonstrasi Position: Static</h1>
+
+ <div class="box static-box">
+    Ini adalah box dengan position: static (default)
+</div>   
+
+<div class="box static-box-with-offset">
+    Box ini juga static, properti offset (top, left) tidak berpengaruh
+</div>  
+
+</body>
+</html>

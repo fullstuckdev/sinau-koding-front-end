@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Properties Demo</title>
+</head>
+<style>
+    .container {
+        margin: 20px;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 2px solid #333;
+    }    
+
+    .item {
+        padding: 20px;
+        margin: 5px;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+    }
+
+    /* 1. Flex Direction Demo */
+    .direction-demo {
+        display: flex;
+        flex-direction: column;
+    }
+
+     /* 2. Flex Wrap Demo */
+     .wrap-demo {
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+     }
+
+     /* 3. Flex Flow Demo */
+     .flow-demo {
+        display: flex;
+        flex-flow: row wrap;
+        width: 300px;
+     }
+
+     .flow-demo .item {
+        width: 100px;
+     }
+
+    /* 4. Justify Content Demo */
+     .justify-demo {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+     }
+
+    /* 5. Align Items Demo */
+    .align-items-demo {
+        display: flex;
+        align-items: center;
+        height: 150px;
+        margin-bottom: 20px;
+    }
+
+    .align-items-demo .item {
+        height: 50px;
+    }
+
+    .align-items-demo .item:nth-child(3) {
+        height: 100px;
+    }
+
+
+    /* 6. Align Content Demo */
+    .align-content-demo {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 300px;
+        width: 300px;
+    }
+
+    .align-content-demo .item {
+        width: 100px;
+    }
+
+
+</style>
+<body>
+    <h2>1. Flex Direction (Column)</h2>
+    <div class="container direction-demo">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>2. Flex Wrap</h2>
+    <div class="container wrap-demo">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+
+    <h2>3. Flex Flow (row rap)</h2>
+    <div class="container flow-demo">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+
+    <h2>4. Justity Conten (Space Between)</h2>
+    <div class="container justify-demo">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+
+    <h2>5. Align Items (center)</h2>
+    <div class="container align-items-demo">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+
+    </div>
+
+    <h2>6. Align Content (space-between)</h2>
+    <div class="container align-content-demo">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+    </div>
+
+
+</body>
+</html>

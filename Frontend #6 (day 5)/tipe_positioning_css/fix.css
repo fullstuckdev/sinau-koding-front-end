@@ -1,0 +1,30 @@
+/* masalah */
+.container {
+    height: 100vh
+}
+
+/* solusi */
+.container {
+    min-height: 100vh;
+    overflow: auto;
+}
+
+/* masalah */
+.content {
+    position: fixed
+}
+
+/* solusi bisa relative atau static */
+.content {
+    position: relative;
+}
+
+/* masalah */
+html, body {
+    height: 100%;
+}
+
+/* solusi */
+html, body {
+    min-height: 100%;
+}
