@@ -1,0 +1,33 @@
+.button {
+    display: inline-block;
+    padding: calc($spacing-unit/2) calc($spacing-unit);
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+
+    @include button-variant($secondary-color);
+
+    &.button-primary {
+        @include button-variant($primary-color)
+    }
+
+    &.button-success {
+        @include button-variant($success-color)
+    }
+
+    &.button-failed {
+        @include button-variant($failed-color)
+    }
+
+    &.button-small {
+        padding: calc($spacing-unit/4) calc($spacing-unit / 2); // top: 4, right: 8, bottom: 4, left: 8
+        font-size: map-get($font-sizes, "small");
+    }
+
+    &.button-large {
+        padding: calc($spacing-unit) calc($spacing-unit * 2);
+        font-size: map-get($font-sizes, "large");
+    }
+}

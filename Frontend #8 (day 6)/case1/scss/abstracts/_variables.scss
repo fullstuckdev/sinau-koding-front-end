@@ -1,0 +1,22 @@
+$primary-color: #007bff;
+$secondary-color: rgb(108,117,125);
+$success-color: hsl(134, 61%, 41%);
+$failed-color: rgb(255, 98, 98);
+$text-color: #333;
+$background-color: #fff;
+$font-stack: "Arial, Helvetica, sans-serif";
+$heading-text: "Welcome to my website";
+$line-height: 1.5;
+$font-sizes: (
+    "small": 14px,
+    "medium": 16px,
+    "large": 18px,
+    "h1": 32px,
+    "h2": 24px
+);
+
+$spacing-unit: 16px;
+$container-width: 1200px;
+$grid-gap: 16px;
+$border-radius: 4px;
+$column: 12;

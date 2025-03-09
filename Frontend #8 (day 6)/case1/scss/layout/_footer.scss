@@ -1,0 +1,61 @@
+$footer-bg: #2c3e50;
+$footer-text-color: #ffffff;
+
+.footer {
+    background: $footer-bg;
+    color: $footer-text-color;
+    padding: $spacing-unit * 2 0;
+
+    &__content {
+        @extend %container-base;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: $spacing-unit * 2
+    }
+
+    &__section {
+        h3 {
+            margin-bottom: $spacing-unit;
+            font-size: 1.2rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        a {
+            color: $footer-text-color;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__bottom {
+        margin-top: $spacing-unit * 2;
+        padding-top: $spacing-unit;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        text-align: center;
+    }
+
+    @include mobile {
+        &__content {
+            grid-template-columns: repeat(2, 1fr);
+            gap: $spacing-unit
+        }
+    }
+
+    @include tablet {
+        &__content {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+}

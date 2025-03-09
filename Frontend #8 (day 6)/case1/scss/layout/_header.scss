@@ -1,0 +1,50 @@
+$header-height: 80px;
+$header-bg: #ffffff;
+$nav-link-color: #333;
+
+%header-flex {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    @extend %header-flex;
+    height: $header-height;
+    background: $header-bg;
+    box-shadow: red;
+    padding: 0 $spacing-unit;
+
+    &__logo {
+        img {
+            height: 40px;
+        }
+    }
+
+    &__nav {
+        @extend %header-flex;
+        margin-left: auto;
+        gap: 2rem;
+    }
+
+    &__link {
+        color: $nav-link-color;
+        text-decoration: none;
+        font-weight: 500;
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &.active {
+            color: $primary-color;
+        }
+    }
+
+    @include mobile {
+        height: 60px;
+        &__nav {
+            display: none;
+        }
+    }
+}
+

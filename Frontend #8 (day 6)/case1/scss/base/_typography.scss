@@ -1,0 +1,37 @@
+body {
+  font-family: $font-stack;
+  font-size: map-get($font-sizes, "medium");
+  color: $text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: $spacing-unit;
+    font-weight: bold;
+}
+
+
+h1 {
+    font-size: map-get($font-sizes, "h1");
+}
+
+h2 {
+    font-size: map-get($font-sizes, "h2");
+}
+
+p {
+    margin-bottom: $spacing-unit;
+    line-height: $line-height;
+}
+
+.text-small {
+    font-size: map-get($font-sizes, "smal");
+}
+
+.text-large {
+    font-size: map-get($font-sizes, "large");
+}
