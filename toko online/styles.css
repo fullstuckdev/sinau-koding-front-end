@@ -1,0 +1,41 @@
+header {
+    background: linear-gradient(135deg, #2c3e50, #34db66);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0,1);
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.product-card {
+    padding:20px;
+    margin: 0 auto;
+    width: 200px;
+    height: 350px;
+   
+    display: inline;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.p{
+    font-family: Arial, sans-serif;
+    
+}

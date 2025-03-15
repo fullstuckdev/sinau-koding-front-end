@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #116604;
+    padding: 15px;
+    position:sticky;
+    top:0px;
+
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+body {
+    height: 200vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sticky-box {
+    position: sticky;
+    display: flex;
+    top: 50vh;
+    align-items: center;
+    justify-content: center;
+}
