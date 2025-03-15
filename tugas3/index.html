@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Front-End #3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <div class="logo">
+            <img class="logo-img" src="assets/logo.png" alt="logo">
+            <h3>TOKO</h3>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            ☰
+        </div>
+    </nav>
+    
+
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Website</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <button>Get Started</button>
+        </div>
+        <div class="hero-image">
+            <img src="assets/logo.png" alt="Hero Image">
+        </div>
+    </div>
+
+    <div class="container flexbox">
+        <div class="box">
+            <p>Ini adalah paragraf dalam box pertama.</p>
+        </div>
+        <div class="box">
+            <p>Ini adalah paragraf dalam box kedua.</p>
+        </div>
+    </div>
+
+
+    <div class="container gridbox">
+        <div class="box">
+            <p>Ini adalah paragraf dalam box pertama.</p>
+        </div>
+        <div class="box">
+            <p>Ini adalah paragraf dalam box kedua.</p>
+        </div>
+    </div>
+
+
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="data:image/jpeg;base64,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" alt="Produk 1">
+            <h3>Produk 1</h3>
+            <p>Rp 150.000</p>
+            <button>Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="data:image/jpeg;base64,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" alt="Produk 2">
+            <h3>Produk 2</h3>
+            <p>Rp 200.000</p>
+            <button>Beli</button>
+        </div>
+        <div class="product-card">
+            <img src="data:image/jpeg;base64,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" alt="Produk 3">
+            <h3>Produk 3</h3>
+            <p>Rp 250.000</p>
+            <button>Beli</button>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
