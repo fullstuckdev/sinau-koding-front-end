@@ -8,7 +8,11 @@ const products = [
 // keranjang belanja
 let cart = []
 
-const addToCart = (productId, quantity) => {
+
+// ini bisa dipanggil. tapi manggilnya otomatis jadi addToCart(2,1)
+addToCart()
+
+const addToCart = (productId = 2, quantity = 1) => {
     const product = products.find(item => item.id === productId)
 
     if (!product) return "Produk tidak ditemukan"
@@ -30,6 +34,22 @@ const addToCart = (productId, quantity) => {
 
     product.stok -= quantity
     return "Product berhasil ditambahkan ke keranjang"
+
+    // ini tidak bakal terbaca, ketika ada command return
+    let halo = "testing"
+
+
+    if (existingItem) {
+        existingItem.quantity += quantity
+    } else {
+        cart.push({
+            id: product.id,
+            nama: product.nama,
+            harga: product.harga,
+            quantity: quantity
+        })
+    }
+
 }
 
 const calculateTotal = () => {
@@ -67,4 +87,9 @@ console.log(addToCart(2, 2)) // bagian kiri, product id. bagian kanan jumlahnya.
 console.log(addToCart(1, 8))
 console.log(addToCart(3, 1))
 
-showCart()
+// testing => Product berhasil ditambahkan ke keranjang
+let testing = addToCart(2,2)
+console.log(`testing ${testing}`)
+
+addToCart(2, 2) // pemanggilan fungsi, dengan parameter
+showCart() // pemanggilan fungsi, tanpa parameter
