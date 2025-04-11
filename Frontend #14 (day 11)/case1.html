@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoh DOM</title>
+  </head>
+  <body onload="onloadData()">
+    <h1 id="judul">Selamat Datang</h1>
+
+    <p class="paragraf">Ini paragraf pertama.</p>
+    <p class="paragraf">Ini paragraf kedua.</p>
+    <p class="paragraf">Ini paragraf ketiga.</p>
+
+    <!---Input dan Output-->
+    <input type="text" id="inputNama" placeholder="Ketik nama kamu di sini" />
+    <button id="tampilkanNama">Tampilkan Nama</button>
+    <div id="outputNama"></div>
+
+    <!---Tombol Manipulasi-->
+    <button id="ubahJudul">Ubah Judul</button>
+    <button id="warnaiParagraf">Warnai Paragraf</button>
+    <button id="tandaiParagraf">Tandai Paragraf</button>
+    <button id="gantiHTML">Ganti Konten HTML</button>
+    <button id="setAtribut">Set Atribut ke Judul</button>
+    <button id="hapusAtribut">Hapus Atribut dari Judul</button>
+
+    <!---Elemen Baru-->
+    <button id="buatElemen">Buat Elemen Baru (createElement)</button>
+    <button id="tambahKeAkhir">Tambah ke akhir (appendChild)</button>
+    <button id="sisipkanAwal">Sisipkan di awal (insertBefore)</button>
+    <button id="hapusAnakTerakhir">Hapus anak terakhir (removeChild)</button>
+    <button id="hapusSemua">Hapus Semua (Remove)</button>
+
+    <!--Inline event handler -->
+    <button onclick="tampilkanInline()" id="btnInline">
+      Inline Event Handle
+    </button>
+
+    <!--Event Listener (modern) -->
+    <button id="btnListener">Event Listener</button>
+
+    <!--Event-->
+    <select id="dropdown" onchange="onChangeData()">
+        <option value="1">Satu</option>
+        <option value="2">Dua</option>
+        <option value="3">Tiga</option>
+    </select>
+
+    <button onclick="onClickData()">On Click</button>
+    <div
+      onmouseover="onMouseOverData()"
+      onmouseout="onMouseOverOutData()"
+      style="padding: 10px; background: #eee; margin: 10px"
+    >
+      Hover Me
+    </div>
+    <input onkeydown="onKeyDownData(event)" placeholder="ketik sesuatu..."> On Key Down
+
+    <div
+      id="containerBaru"
+      style="margin-top: 10px; padding: 10px; border: 1px solid gray"
+    >
+      <p><strong>Container untuk Elemen Baru:</strong></p>
+    </div>
+
+    <script src="./case1.js"></script>
+  </body>
+</html>

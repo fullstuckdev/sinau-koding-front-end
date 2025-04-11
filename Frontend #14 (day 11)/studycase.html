@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Produk</title>
+  </head>
+  <body>
+    <h2>List Produk</h2>
+    <input type="text" oninput="cariProduk()" placeholder="Cari produk..." />
+    <ul id="produkList"></ul>
+
+    <script>
+      const produk = ["Laptop", "HP", "Kamera", "Headset", "Kulkas"];
+
+      function cariProduk() {
+        const q = event.target.value.toLowerCase();
+        const hasil = produk.filter((p) => p.toLowerCase().includes(q));
+        document.getElementById("produkList").innerHTML = hasil
+          .map((p) => `<li>${p}</li>`)
+          .join("");
+      }
+
+      cariProduk();
+    </script>
+  </body>
+</html>
