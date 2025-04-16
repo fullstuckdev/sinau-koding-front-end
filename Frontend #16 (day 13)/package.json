@@ -1,0 +1,19 @@
+{
+  "name": "tes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "e-commerce.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/e-commerce.ts",
+    "dev": "ts-node-dev src/e-commerce.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
