@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Produk DummyJSON</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .product {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin: 10px 0;
+      }
+      .product img {
+        max-width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Daftar Produk</h1>
+    <div id="product-list"></div>
+
+    <script>
+      async function getProducts() {
+        try {
+          // Step by step
+          // 1. kita lakukan fetching data dari backend
+          // 2. kita convert data tersebut jadi JSON
+          // 3. kita lakukan looping data tersebut, setelah itu kita taruh ke dalam HTML
+
+          // lakukan yang namanya fetching data.. menggunakan fungsi fetch
+          const response = await fetch("https://dummyjson.com/products"); // URL atau link dari backend
+
+          // setelah kita mendapatkan datanya, kita convert jadi JSON
+          const data = await response.json();
+
+          ///console.log(data);
+
+          // bikin variabel productList, agar kita bisa menampung data
+          const productList = document.getElementById("product-list");
+
+          //           {
+          // "id": 1,
+          // "title": "Essence Mascara Lash Princess",
+          // "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+          // "category": "beauty",
+          // "price": 9.99,
+          //           }
+
+          // Looping - forEach
+          data.products.forEach((product) => {
+            console.log(product.price);
+
+            // untuk menambahkan tag div
+            const productDiv = document.createElement("div");
+            // kita tambahin className nya product
+            productDiv.className = "product";
+
+            // data data yang ada di product. title, thumbnail, description, price kita taruh ke html
+            productDiv.innerHTML = `
+            <h3>${product.title}</h3>
+            <img src="${product.thumbnail}" alt="${product.title}" />
+            <p>${product.description}</p>
+            <strong>Harga: $${product.price}</strong> <br>
+            <strong>Diskon: ${product.discountPercentage}</strong> <br>
+            <strong>Rating: ${product.rating}</strong> 
+
+          `;
+
+            // menambahkan tag div baru di sini <div id="product-list"></div>
+            productList.appendChild(productDiv);
+          });
+        } catch (error) {
+          console.error("Gagal mengambil data produk:", error);
+        }
+      }
+
+      getProducts();
+    </script>
+  </body>
+</html>
