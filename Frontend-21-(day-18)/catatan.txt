@@ -1,0 +1,21 @@
+Dynamic Routing:
+/product/1
+/product/2
+/product/3
+/product/4
+
+Nested Routing:
+/dashboard/users/
+/dashboard/settings
+/dashboard/admin
+
+Middleware dan Logika Routing:
+- masuk login admin
+- sebelum masuk halaman admin, login dulu sebagai admin
+- check apakah admin atau bukan
+- kalau admin, boleh masuk
+- kalau bukan, tidak boleh
+
+1 => <a href="/about">	Reload seluruh halaman dari server
+
+2 => <Link to="/about"> (React Router)	Ganti tampilan tanpa reload, cepat dan mulus
