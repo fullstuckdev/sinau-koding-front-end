@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-
+import { API_URL_JSON, ENDPOINTS } from "../config/apiConfig";
 interface Post {
   id: number;
   title: string;
   body: string;
 }
-
-const API_URL = "https://jsonplaceholder.typicode.com/posts";
 
 export function PostsFetch() {
   // dia menyimpan, mengambil, menghapus, dan mengupdate data postingan
@@ -17,13 +15,13 @@ export function PostsFetch() {
   const [newBody, setNewBody] = useState("");
 
   useEffect(() => {
-    fetch(API_URL) // untuk mengambil data dari variabel API_URL
+    fetch(`${API_URL_JSON}${ENDPOINTS.getPosts}`) // untuk mengambil data dari variabel API_URL
       .then((res) => res.json()) // untuk konversi data menjadi json
       .then((data: Post[]) => setPosts(data.slice(0, 1))); // Mengambil 5 postingan pertama
   }, []);
 
   const handleCreate = async () => {
-    const response = await fetch(API_URL, {
+    const response = await fetch(`${API_URL_JSON}${ENDPOINTS.createPosts}`, {
       method: "POST", // POST untuk membuat atau mengirim data
       headers: {
         "Content-Type": "application/json", // menandakan bahwa kita mengirim JSON
@@ -54,17 +52,20 @@ export function PostsFetch() {
   };
 
   const handleUpdate = async (id: number) => {
-    const response = await fetch(`${API_URL}/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        title: newTitle || "Updated Title",
-        body: newBody || "Updated Body",
-        userId: 1,
-      }),
-    });
+    const response = await fetch(
+      `${API_URL_JSON}${ENDPOINTS.updatePosts.replace(":id", id.toString())}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: newTitle || "Updated Title",
+          body: newBody || "Updated Body",
+          userId: 1,
+        }),
+      }
+    );
 
     const data: Post = await response.json(); // konversi JSON
 
@@ -74,7 +75,9 @@ export function PostsFetch() {
   };
 
   const handleDelete = async (id: number) => {
-    await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+    await fetch(`${API_URL_JSON}${ENDPOINTS.deletePosts}`, {
+      method: "DELETE",
+    });
     setPosts(posts.filter((post) => post.id !== id));
   };
 
